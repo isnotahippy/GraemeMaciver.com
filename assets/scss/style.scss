@@ -1,0 +1,23 @@
+@import "_grid.scss";
+@import "_layouts.scss";
+@import "_fonts.scss";
+@import "_font-awesome.scss";
+
+body, html {
+    margin: 0;
+    background: url(../img/cardboard_flat.png);
+	@extend .clearfix;
+}
+
+.clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}

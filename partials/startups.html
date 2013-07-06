@@ -1,0 +1,21 @@
+<section>
+	<header>
+		<h2 id="startups">Start ups</h2>
+		<p>I love to solve problems, and the idea of taking a solution to a problem I'm passionate about and creating a business from it thrills me. The start up community in London was a large part of the reason I moved here, I wanted to surround myself with likeminded people and get involved. </p>
+	</header>
+	<article>
+		<img src="assets/img/bookpond2.png" />
+		<h3 id="bookpond">The Book Pond</h3>
+		<p>Built around 2008, The Book Pond provides an online peer to peer marketplace bringing together students who are looking to buy and sell academic text books, without paying book shop fees. The website was marketed on university campuses in the UK, was a feature on Pocket Lint and BBC Click's Webscape. Unfortunatly the website never fully took off, but it is still ticking over at www.theBookPond.com</p>
+		<nav>
+			<a href="http://www.thebookpond.com">theBookPond.com</a>
+			<a href="http://www.pocket-lint.com/news/108471-best-prices-for-old-books">Pocket Lint's website of the day</a>
+			<a href="http://news.bbc.co.uk/1/hi/programmes/click_online/9526994.stm">BBC Click covers The Book Pond</a>
+		</nav>
+	</article>
+
+	<article>
+		<h3 id="simplypaste">Simply Paste <span>(0.66 startup)</span></h3>
+		<p>Another online match maker, Simply paste was to be the place to go for editors to easily obtain high quality handwritten copy, articles, and other journalistic artefacts. Built on a LAMP stack, with a heavy Javascript/partial loading front end the website was a lot of fun to build, however in the end the business was not meant to be.  </p>
+	</article>
+</section>
