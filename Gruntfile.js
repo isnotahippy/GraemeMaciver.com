@@ -50,7 +50,7 @@ module.exports = function(grunt) {
       'gh-pages': {
         // These files will get pushed to the `gh-pages` branch (the default).
         base: 'build',
-        src: ['**/*']
+        src: ['*']
       },
     }
   });
