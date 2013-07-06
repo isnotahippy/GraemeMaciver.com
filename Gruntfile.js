@@ -38,6 +38,13 @@ module.exports = function(grunt) {
     watch: {
       files: ['source/**/*'],
       tasks: ['copy', 'sass', 'swig']
+    },
+    build_gh_pages: {
+      production: {
+        options: {
+          dist: "build"
+        }
+      }
     }
   });
 
@@ -46,8 +53,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-swig');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-build-gh-pages');
 
   // Add tasks
   grunt.registerTask('default', ['copy', 'sass', 'swig']);
+  grunt.registerTask('github', ['build_gh_pages']);
 
 };
