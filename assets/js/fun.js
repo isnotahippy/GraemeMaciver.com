@@ -51,7 +51,6 @@ Fun.menuItems = [];
 Fun.resetmenu = function() {
 	for(item in Fun.menuItems) {
 		Fun.menuItems[item].className = Fun.menuItems[item].className.replace(/ active/g, "");
-		console.log(Fun.menuItems[item].className);
 	}
 }
 
