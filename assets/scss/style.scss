@@ -1,8 +1,3 @@
-@import "_grid.scss";
-@import "_layouts.scss";
-@import "_fonts.scss";
-@import "_font-awesome.scss";
-
 body, html {
     margin: 0;
     background: url(../img/cardboard_flat.png);
@@ -21,3 +16,16 @@ body, html {
         clear: both;
     }
 }
+
+@mixin transition($properties...) {
+    -webkit-transition: $properties;
+    -moz-transition: $properties;
+    -o-transition: $properties;
+    -ms-transition: $properties;
+    transition: $properties;
+}
+
+@import "_grid.scss";
+@import "_layouts.scss";
+@import "_fonts.scss";
+@import "_font-awesome.scss";

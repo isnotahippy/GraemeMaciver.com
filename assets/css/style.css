@@ -1,3 +1,17 @@
+body, html {
+  margin: 0;
+  background: url(../img/cardboard_flat.png); }
+
+.clearfix, body, html, .row, .left nav ul li.social, section.right section {
+  zoom: 1; }
+  .clearfix:before, body:before, html:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, body:after, html:after, .row:after, .left nav ul li.social:after, section.right section:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .clearfix:after, body:after, html:after, .row:after, .left nav ul li.social:after, section.right section:after {
+    clear: both; }
+
 /**
  *	Notes: box-sizing breaks <IE8;
  *
@@ -139,14 +153,14 @@ html, body {
 .push-col-16 {
   margin-left: 100%; }
 
-.clearfix, html, body, .row, .left nav ul li.social, section.right section {
+.clearfix, body, html, .row, .left nav ul li.social, section.right section {
   zoom: 1; }
-  .clearfix:before, html:before, body:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, html:after, body:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:before, body:before, html:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, body:after, html:after, .row:after, .left nav ul li.social:after, section.right section:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, html:after, body:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:after, body:after, html:after, .row:after, .left nav ul li.social:after, section.right section:after {
     clear: both; }
 
 .menu-closed .left {
@@ -162,6 +176,10 @@ html, body {
 
 .left {
   -webkit-transition: left 1s ease-out;
+  -moz-transition: left 1s ease-out;
+  -o-transition: left 1s ease-out;
+  -ms-transition: left 1s ease-out;
+  transition: left 1s ease-out;
   position: fixed;
   height: 100%;
   background: url(../img/tweed.png);
@@ -181,7 +199,11 @@ html, body {
         margin: 0 20px 0 0; }
       .left nav ul li a {
         display: block;
-        -webkit-transition: padding 0.3s ease-out; }
+        -webkit-transition: padding 0.3s ease-out;
+        -moz-transition: padding 0.3s ease-out;
+        -o-transition: padding 0.3s ease-out;
+        -ms-transition: padding 0.3s ease-out;
+        transition: padding 0.3s ease-out; }
       .left nav ul li.first {
         border-top: 0; }
       .left nav ul li.last {
@@ -199,7 +221,11 @@ html, body {
 
 section.right {
   float: left;
-  -webkit-transition: margin 1s ease-out, width 1s ease-out; }
+  -webkit-transition: margin 1s ease-out, width 1s ease-out;
+  -moz-transition: margin 1s ease-out, width 1s ease-out;
+  -o-transition: margin 1s ease-out, width 1s ease-out;
+  -ms-transition: margin 1s ease-out, width 1s ease-out;
+  transition: margin 1s ease-out, width 1s ease-out; }
   section.right section {
     padding-bottom: 2em; }
     section.right section h2 {
@@ -211,7 +237,8 @@ section.right {
       border-bottom: 0; }
     section.right section img {
       margin: 2em -220px 0 0;
-      float: right; }
+      float: right;
+      border: 0; }
     section.right section header, section.right section article {
       margin: 0 220px 0 0;
       position: relative; }
@@ -220,6 +247,10 @@ section.right {
       margin: 0.5em 0; }
   section.right .open {
     -webkit-transition: left 1s ease-out;
+    -moz-transition: left 1s ease-out;
+    -o-transition: left 1s ease-out;
+    -ms-transition: left 1s ease-out;
+    transition: left 1s ease-out;
     z-index: 1;
     position: fixed;
     left: 20px;
@@ -248,8 +279,11 @@ section.right {
       height: 100%;
       background: rgba(2, 119, 158, 0.3);
       z-index: 0;
-      -webkit-transition: width 1s;
-      transition: width 1s; }
+      -webkit-transition: width 1s ease-out;
+      -moz-transition: width 1s ease-out;
+      -o-transition: width 1s ease-out;
+      -ms-transition: width 1s ease-out;
+      transition: width 1s ease-out; }
     .skills ul li span {
       z-index: 2;
       position: relative; }
@@ -266,10 +300,11 @@ body {
   text-decoration: none; }
 
 .left h1 {
-  font-size: 1.6em;
-  font-weight: 600;
+  font-size: 2em;
+  text-shadow: 1px 1px 1px black;
   color: #FFFFFF;
-  margin: 0.5em 0 0; }
+  margin: 0;
+  font-family: 'Damion', cursive; }
 .left p {
   font-size: 0.8em;
   font-weight: 600;
@@ -1308,17 +1343,3 @@ ul.icons {
 
 .icon-folder-open-alt:before {
   content: "\f115"; }
-
-body, html {
-  margin: 0;
-  background: url(../img/cardboard_flat.png); }
-
-.clearfix, html, body, .row, .left nav ul li.social, section.right section {
-  zoom: 1; }
-  .clearfix:before, html:before, body:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, html:after, body:after, .row:after, .left nav ul li.social:after, section.right section:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-  .clearfix:after, html:after, body:after, .row:after, .left nav ul li.social:after, section.right section:after {
-    clear: both; }

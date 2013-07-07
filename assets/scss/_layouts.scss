@@ -31,7 +31,8 @@
 }
 
 .left {
-	-webkit-transition: left 1s ease-out;
+	@include transition(left 1s ease-out);
+
 	position: fixed;
 	height: 100%;
 	background: url(../img/tweed.png);
@@ -61,7 +62,7 @@
 
 				a {
 					display: block;
-					-webkit-transition: padding 0.3s ease-out;
+					@include transition(padding 0.3s ease-out);
 				}
 
 				&.first {
@@ -95,7 +96,7 @@
 
 section.right {
 	float: left;
-	-webkit-transition: margin 1s ease-out, width 1s ease-out;
+	@include transition(margin 1s ease-out, width 1s ease-out);
 
 	section {
 		padding-bottom: 2em;
@@ -117,6 +118,7 @@ section.right {
 		img {
 			margin: 2em -220px 0 0;
 			float: right;
+			border: 0;
 		}
 
 		header, article {
@@ -133,7 +135,7 @@ section.right {
 	}
 
 	.open {
-		-webkit-transition: left 1s ease-out;
+		@include transition(left 1s ease-out);
 		z-index:1;
 		position: fixed;
 		left: 20px;
@@ -167,8 +169,7 @@ section.right {
 				height: 100%;
 				background: rgba(2,119,158,0.3);
 				z-index: 0;
-				-webkit-transition: width 1s;
-				transition: width 1s;
+				@include transition(width 1s ease-out);
 			}
 
 			span {
