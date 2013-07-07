@@ -42,11 +42,62 @@ Fun.menu = function() {
 	Sizzle.matches('.open')[0].onclick = Fun.toggleMenu;
 }
 
+// menu highlighting
+Fun.sections = [];
+Fun.heights = [];
+Fun.current = null;
+Fun.menuItems = [];
+
+Fun.resetmenu = function() {
+	for(item in Fun.menuItems) {
+		Fun.menuItems[item].className = Fun.menuItems[item].className.replace(/ active/g, "");
+		console.log(Fun.menuItems[item].className);
+	}
+}
+
+Fun.menuActive = function(heightIndex) {
+
+	if(heightIndex<0) heightIndex = 0;
+
+	if(heightIndex==Fun.current) return null;
+
+	Fun.resetmenu();
+
+	var navItem = Sizzle.matches('.left ul li.' + Fun.sections[heightIndex].getElementsByTagName('h2')[0].id)[0];
+	navItem.className += ' active';
+
+	Fun.current = heightIndex;
+}
+
+Fun.scrolling = function() {
+
+	Fun.sections = Sizzle.matches('.right section');
+	Fun.heights = [];
+	Fun.current = Fun.sections[0];
+	Fun.menuItems = Sizzle.matches('.left ul li');
+
+	for(section in Fun.sections) {
+		Fun.heights.push(Fun.sections[section].offsetTop);
+	}
+
+	document.onscroll = function() {
+		var val = document.body.scrollTop;
+
+		for(height in Fun.heights) {
+			if(val<Fun.heights[height]) {
+				Fun.menuActive(height-1);
+				break;
+			}
+		}
+	}
+}
+
 // Set up
 window.onload = function() {
 	Fun.skills();
 	Fun.headlines();
 	Fun.menu();
+	Fun.scrolling();
 	console.log('Want to see my code? Check out http://github.com/isnotahippy');
 }
 
