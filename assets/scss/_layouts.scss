@@ -1,3 +1,13 @@
+.transitions {
+	.left {
+		@include transition(left 1s ease-out);
+	}
+
+	.right {
+		@include transition(margin 1s ease-out, width 1s ease-out);
+	}
+}
+
 .menu-closed {
 	.left {
 		left: -300px;
@@ -5,7 +15,7 @@
 
 	.right {
 		.open {
-			left: 2%;
+			left: 1.5%;
 		}
 
 		@extend .col-15;
@@ -31,7 +41,6 @@
 }
 
 .left {
-	@include transition(left 1s ease-out);
 
 	position: fixed;
 	height: 100%;
@@ -102,14 +111,14 @@
 
 section.right {
 	float: left;
-	@include transition(margin 1s ease-out, width 1s ease-out);
+	width: 100%;
 
 	section {
 		padding-bottom: 2em;
 		@extend .clearfix;
 
 		h2 {
-			padding: 30px 0 10px;
+			padding: 7px 0 6px;
 			margin: 0;
 		}
 
@@ -145,7 +154,7 @@ section.right {
 		z-index:1;
 		position: fixed;
 		left: 20px;
-		top: 37px;
+		top: 13px;
 		border-radius: 20px;
 		padding: 5px;
 		color: black;

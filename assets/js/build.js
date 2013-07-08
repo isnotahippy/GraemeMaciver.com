@@ -2033,18 +2033,19 @@ Fun.headlines = function() {
 Fun.toggle = true;
 
 Fun.toggleMenu = function() {
+
 	if(Fun.toggle) {
-		Sizzle.matches('body')[0].setAttribute('class','menu-closed');
+		Sizzle.matches('body')[0].className = 'menu-closed transitions';
 		Fun.toggle = false;
 	} else {
-		Sizzle.matches('body')[0].setAttribute('class','menu-open');
+		Sizzle.matches('body')[0].className = 'menu-open transitions';
 		Fun.toggle = true;
 	}
 }
 
 Fun.menu = function() {
-	Sizzle.matches('body')[0].setAttribute('class','menu-open');
-
+	console.log(Sizzle.matches('body')[0]);
+	Sizzle.matches('body')[0].className = 'menu-open transitions';
 	Sizzle.matches('.close')[0].onclick = Fun.toggleMenu;
 	Sizzle.matches('.open')[0].onclick = Fun.toggleMenu;
 }

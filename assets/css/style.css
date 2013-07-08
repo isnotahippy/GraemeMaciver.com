@@ -1,16 +1,16 @@
 body, html {
   margin: 0;
-  background: url(../img/cardboard_flat.png);
+  background-image: url(../img/cardboard_flat.png);
   background-color: #dadada; }
 
-.clearfix, body, html, .row, .left nav ul li.social, section.right section {
+.clearfix, .row, .left nav ul li.social, section.right section {
   zoom: 1; }
-  .clearfix:before, body:before, html:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, body:after, html:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, .row:after, .left nav ul li.social:after, section.right section:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, body:after, html:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:after, .row:after, .left nav ul li.social:after, section.right section:after {
     clear: both; }
 
 /**
@@ -20,8 +20,7 @@ body, html {
 html, body {
   min-width: 970px;
   max-width: 1240px;
-  position: relative;
-  min-height: 100%; }
+  position: relative; }
 
 .left {
   max-width: 285.2px;
@@ -154,20 +153,33 @@ html, body {
 .push-col-16 {
   margin-left: 100%; }
 
-.clearfix, body, html, .row, .left nav ul li.social, section.right section {
+.clearfix, .row, .left nav ul li.social, section.right section {
   zoom: 1; }
-  .clearfix:before, body:before, html:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, body:after, html:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, .row:after, .left nav ul li.social:after, section.right section:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, body:after, html:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:after, .row:after, .left nav ul li.social:after, section.right section:after {
     clear: both; }
+
+.transitions .left {
+  -webkit-transition: left 1s ease-out;
+  -moz-transition: left 1s ease-out;
+  -o-transition: left 1s ease-out;
+  -ms-transition: left 1s ease-out;
+  transition: left 1s ease-out; }
+.transitions .right {
+  -webkit-transition: margin 1s ease-out, width 1s ease-out;
+  -moz-transition: margin 1s ease-out, width 1s ease-out;
+  -o-transition: margin 1s ease-out, width 1s ease-out;
+  -ms-transition: margin 1s ease-out, width 1s ease-out;
+  transition: margin 1s ease-out, width 1s ease-out; }
 
 .menu-closed .left {
   left: -300px; }
 .menu-closed .right .open {
-  left: 2%; }
+  left: 1.5%; }
 
 .menu-open .right .open {
   left: -50px; }
@@ -176,11 +188,6 @@ html, body {
   cursor: pointer; }
 
 .left {
-  -webkit-transition: left 1s ease-out;
-  -moz-transition: left 1s ease-out;
-  -o-transition: left 1s ease-out;
-  -ms-transition: left 1s ease-out;
-  transition: left 1s ease-out;
   position: fixed;
   height: 100%;
   background: url(../img/tweed.png);
@@ -224,15 +231,11 @@ html, body {
 
 section.right {
   float: left;
-  -webkit-transition: margin 1s ease-out, width 1s ease-out;
-  -moz-transition: margin 1s ease-out, width 1s ease-out;
-  -o-transition: margin 1s ease-out, width 1s ease-out;
-  -ms-transition: margin 1s ease-out, width 1s ease-out;
-  transition: margin 1s ease-out, width 1s ease-out; }
+  width: 100%; }
   section.right section {
     padding-bottom: 2em; }
     section.right section h2 {
-      padding: 30px 0 10px;
+      padding: 7px 0 6px;
       margin: 0; }
     section.right section.first {
       border-top: 0; }
@@ -257,7 +260,7 @@ section.right {
     z-index: 1;
     position: fixed;
     left: 20px;
-    top: 37px;
+    top: 13px;
     border-radius: 20px;
     padding: 5px;
     color: black;
@@ -304,10 +307,13 @@ body {
 
 .left h1 {
   font-size: 2em;
+  line-height: 0.8em;
   text-shadow: 1px 1px 1px black;
   color: #FFFFFF;
   margin: 0;
-  font-family: 'Damion', cursive; }
+  font-family: 'Damion', cursive;
+  font-weight: normal;
+  text-align: center; }
 .left p {
   font-size: 0.8em;
   font-weight: 600;
