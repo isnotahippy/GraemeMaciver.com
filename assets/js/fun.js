@@ -37,7 +37,6 @@ Fun.toggleMenu = function() {
 }
 
 Fun.menu = function() {
-	console.log(Sizzle.matches('body')[0]);
 	Sizzle.matches('body')[0].className = 'menu-open transitions';
 	Sizzle.matches('.close')[0].onclick = Fun.toggleMenu;
 	Sizzle.matches('.open')[0].onclick = Fun.toggleMenu;
