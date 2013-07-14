@@ -218,7 +218,7 @@ html, body {
         border-bottom: 0; }
     .left nav ul li.active a, .left nav ul li:hover a {
       padding: 0 0 0 10px; }
-    .left nav ul li.active.social a, .left nav ul li:hover.social a {
+    .left nav ul li.active.social a, .left nav ul li.active.first a, .left nav ul li:hover.social a, .left nav ul li:hover.first a {
       padding: 0; }
   .left .close {
     position: absolute;
