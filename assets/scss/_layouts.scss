@@ -50,7 +50,29 @@
 
 	nav {
 
-		ul {
+		ul.contact {
+			margin: 0;
+			padding: 10px;
+			list-style: none;
+			background: rgba(0,0,0, 0.3);
+			box-shadow: inset 0 12px 10px -11px rgba(0,0,0,0.5), inset 0 -14px 10px -11px rgba(0,0,0,0.3);
+
+			li {
+				padding: 5px 10px;
+				position: relative;
+				font-size: 0.8em;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				color: white;
+				overflow: hidden;
+
+				i {
+					margin-right: 0.5em;
+				}
+			}
+		}
+
+		ul.navigation {
 			margin: 0 10px;
 			padding: 0;
 			list-style: none;
@@ -192,6 +214,33 @@ section.right {
 				position: relative;
 			}
 		}
+	}
+}
+
+.cv {
+	position: absolute;
+	right: -220px;
+	top: 192px;
+	display: block;
+	width: 200px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1em;
+	border-top: 30px solid rgba(2, 119, 158, 0.8);
+	border: 30px solid rgba(2, 119, 158, 0.8);
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 0px solid transparent;
+
+	span {
+		color: white;
+		margin: -26px 0 0;
+		display: block;
+		border-color: white;
+		border-width: 1px 0 1px 0;
+		border-style: dashed;
+		width: 200px;
 	}
 }
 

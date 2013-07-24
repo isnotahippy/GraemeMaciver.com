@@ -3,14 +3,14 @@ body, html {
   background-image: url(../img/cardboard_flat.png);
   background-color: #dadada; }
 
-.clearfix, .row, .left nav ul li.social, section.right section {
+.clearfix, .row, .left nav ul.navigation li.social, section.right section {
   zoom: 1; }
-  .clearfix:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:before, .row:before, .left nav ul.navigation li.social:before, section.right section:before, .clearfix:after, .row:after, .left nav ul.navigation li.social:after, section.right section:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:after, .row:after, .left nav ul.navigation li.social:after, section.right section:after {
     clear: both; }
 
 /**
@@ -153,14 +153,14 @@ html, body {
 .push-col-16 {
   margin-left: 100%; }
 
-.clearfix, .row, .left nav ul li.social, section.right section {
+.clearfix, .row, .left nav ul.navigation li.social, section.right section {
   zoom: 1; }
-  .clearfix:before, .row:before, .left nav ul li.social:before, section.right section:before, .clearfix:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:before, .row:before, .left nav ul.navigation li.social:before, section.right section:before, .clearfix:after, .row:after, .left nav ul.navigation li.social:after, section.right section:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .left nav ul li.social:after, section.right section:after {
+  .clearfix:after, .row:after, .left nav ul.navigation li.social:after, section.right section:after {
     clear: both; }
 
 .transitions .left {
@@ -193,32 +193,48 @@ html, body {
   background: url(../img/tweed.png);
   border-right: 1px solid rgba(0, 0, 0, 0.4);
   z-index: 10; }
-  .left nav ul {
+  .left nav ul.contact {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 12px 10px -11px rgba(0, 0, 0, 0.5), inset 0 -14px 10px -11px rgba(0, 0, 0, 0.3); }
+    .left nav ul.contact li {
+      padding: 5px 10px;
+      position: relative;
+      font-size: 0.8em;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: white;
+      overflow: hidden; }
+      .left nav ul.contact li i {
+        margin-right: 0.5em; }
+  .left nav ul.navigation {
     margin: 0 10px;
     padding: 0;
     list-style: none; }
-    .left nav ul li {
+    .left nav ul.navigation li {
       padding: 15px 10px;
       border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
       border-top: 1px dashed rgba(255, 255, 255, 0.4);
       position: relative; }
-      .left nav ul li.social a {
+      .left nav ul.navigation li.social a {
         float: left;
         margin: 0 20px 0 0; }
-      .left nav ul li a {
+      .left nav ul.navigation li a {
         display: block;
         -webkit-transition: padding 0.3s ease-out;
         -moz-transition: padding 0.3s ease-out;
         -o-transition: padding 0.3s ease-out;
         -ms-transition: padding 0.3s ease-out;
         transition: padding 0.3s ease-out; }
-      .left nav ul li.first {
+      .left nav ul.navigation li.first {
         border-top: 0; }
-      .left nav ul li.last {
+      .left nav ul.navigation li.last {
         border-bottom: 0; }
-    .left nav ul li.active a, .left nav ul li:hover a {
+    .left nav ul.navigation li.active a, .left nav ul.navigation li:hover a {
       padding: 0 0 0 10px; }
-    .left nav ul li.active.social a, .left nav ul li.active.first a, .left nav ul li:hover.social a, .left nav ul li:hover.first a {
+    .left nav ul.navigation li.active.social a, .left nav ul.navigation li.active.first a, .left nav ul.navigation li:hover.social a, .left nav ul.navigation li:hover.first a {
       padding: 0; }
   .left .close {
     position: absolute;
@@ -293,6 +309,30 @@ section.right {
     .skills ul li span {
       z-index: 2;
       position: relative; }
+
+.cv {
+  position: absolute;
+  right: -220px;
+  top: 192px;
+  display: block;
+  width: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1em;
+  border-top: 30px solid rgba(2, 119, 158, 0.8);
+  border: 30px solid rgba(2, 119, 158, 0.8);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 0px solid transparent; }
+  .cv span {
+    color: white;
+    margin: -26px 0 0;
+    display: block;
+    border-color: white;
+    border-width: 1px 0 1px 0;
+    border-style: dashed;
+    width: 200px; }
 
 body {
   font-family: 'Open Sans', sans-serif;
