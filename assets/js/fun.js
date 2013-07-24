@@ -80,13 +80,24 @@ Fun.scrolling = function() {
 	}
 
 	document.onscroll = function() {
-		var val = document.body.scrollTop;
+		var atHeight = document.body.scrollTop;
+		var totalHeight = document.height;
+		var viewHeight = document.documentElement.clientHeight;
 
-		for(height in Fun.heights) {
-			if(val<Fun.heights[height]) {
-				Fun.menuActive(height-1);
-				break;
+		if(atHeight>Fun.heights[Fun.heights.length-1]) {
+			Fun.menuActive(Fun.heights.length-1);
+		} else {
+
+			for(height in Fun.heights) {
+
+				x = (Fun.heights[height]-atHeight)/((atHeight+viewHeight)-atHeight);
+
+				if(x>0.5) {
+					Fun.menuActive(height-1);
+					break;
+				}
 			}
+
 		}
 	}
 }
