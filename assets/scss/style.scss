@@ -1,9 +1,3 @@
-body, html {
-    margin: 0;
-    background-image: url(../img/cardboard_flat.png);
-    background-color: #dadada;
-}
-
 .clearfix {
     zoom:1;
     &:before, &:after {
@@ -25,7 +19,6 @@ body, html {
     transition: $properties;
 }
 
-@import "_grid.scss";
 @import "_layouts.scss";
 @import "_fonts.scss";
 @import "_font-awesome.scss";

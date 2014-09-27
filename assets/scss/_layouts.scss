@@ -1,246 +1,45 @@
-.transitions {
-	.left {
-		@include transition(left 1s ease-out);
-	}
-
-	.right {
-		@include transition(margin 1s ease-out, width 1s ease-out);
-	}
-}
-
-.menu-closed {
-	.left {
-		left: -300px;
-	}
-
-	.right {
-		.open {
-			left: 1.5%;
-		}
-
-		@extend .col-15;
-		@extend .push-col-1;
-	}
-}
-
-.menu-open {
-	.left {
-	}
-
-	.right {
-		.open {
-			left: -50px;
-		}
-		@extend .col-12;
-		@extend .push-col-4;
-	}
-}
-
-.open, .close {
-	cursor: pointer;
-}
-
-.left {
-
-	position: fixed;
-	height: 100%;
-	background: url(../img/tweed.png);
-	border-right: 1px solid rgba(0,0,0,0.4);
-	z-index: 10;
-
-	nav {
-
-		ul.contact {
-			margin: 0;
-			padding: 10px;
-			list-style: none;
-			background: rgba(0,0,0, 0.3);
-			box-shadow: inset 0 12px 10px -11px rgba(0,0,0,0.5), inset 0 -14px 10px -11px rgba(0,0,0,0.3);
-
-			li {
-				padding: 5px 10px;
-				position: relative;
-				font-size: 0.8em;
-				white-space: nowrap;
-				text-overflow: ellipsis;
-				color: white;
-				overflow: hidden;
-
-				i {
-					margin-right: 0.5em;
-				}
-			}
-		}
-
-		ul.navigation {
-			margin: 0 10px;
-			padding: 0;
-			list-style: none;
-
-			li {
-				padding: 15px 10px;
-				border-bottom: 1px dashed rgba(0,0,0,0.4);
-				border-top: 1px dashed rgba(255,255,255,0.4);
-				position: relative;
-
-				&.social {
-					@extend .clearfix;
-					a {
-						float: left;
-						margin: 0 20px 0 0;
-					}
-				}
-
-				a {
-					display: block;
-					@include transition(padding 0.3s ease-out);
-				}
-
-				&.first {
-					border-top:0;
-				}
-
-				&.last {
-					border-bottom: 0;
-				}
-
-			}
-
-			li.active, li:hover {
-				a {
-					padding: 0 0 0 10px;
-				}
-
-				&.social, &.first {
-					a {
-						padding: 0;
-					}
-				}
-			}
-		}
-	}
-
-	.close {
-		position: absolute;
-		right: 10px;
-		bottom: 10px;
-		border-radius: 20px;
-		padding: 5px;
-		color: white;
-		border: 3px solid white;
-	}
-}
-
-section.right {
-	float: left;
+html, body {
 	width: 100%;
-
-	section {
-		padding-bottom: 2em;
-		@extend .clearfix;
-
-		h2 {
-			padding: 7px 0 6px;
-			margin: 0;
-		}
-
-		&.first { 
-			border-top: 0;
-		}
-
-		&.last { 
-			border-bottom: 0;
-		}
-
-		img {
-			margin: 2em -220px 0 0;
-			float: right;
-			border: 0;
-		}
-
-		header, article {
-			margin: 0 220px 0 0;
-			position: relative;
-		}
-
-		header nav, article nav {
-			a {
-				display: block;
-				margin: 0.5em 0;
-			}
-		}
-	}
-
-	.open {
-		@include transition(left 1s ease-out);
-		z-index:1;
-		position: fixed;
-		left: 20px;
-		top: 13px;
-		border-radius: 20px;
-		padding: 5px;
-		color: black;
-		border: 3px solid black;
-		padding: 5px 6px;
-	}
+	height: 100%;
 }
 
-.skills {
-	ul {
-		padding: 0;
-		list-style: none;
+body {
+	margin: 0;
+	padding: 0;
 
-		li {
+	.container {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: " ";
 			width: 100%;
-			position: relative;
-			padding: 0.4em;
-			margin: 0.2em 0;
-			background: url(../img/tweed.png);
-			
-			i {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 0%;
-				display: block;
-				height: 100%;
-				background: rgba(2,119,158,0.3);
-				z-index: 0;
-				@include transition(width 1s ease-out);
-			}
+			height: 100%;
+			box-shadow: inset 0px 0px 200px rgba(0,0,0, 0.8);
+			z-index: 500;
+		}
+		video {
+			position: absolute;
+			right: 0;
 
-			span {
-				z-index: 2;
+			width: auto;
+			height: 100%;
+		}
+
+		.content {
+			position: relative;
+			z-index: 600;
+
+			#logo {
 				position: relative;
+				width: 300px;
+				fill: rgba(0,0,0,0.9);
 			}
 		}
 	}
 }
-
-.cv {
-	position: absolute;
-	right: -220px;
-	top: 192px;
-	display: block;
-	width: 200px;
-	text-align: center;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 1em;
-	border-top: 30px solid rgba(2, 119, 158, 0.8);
-	border: 30px solid rgba(2, 119, 158, 0.8);
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
-	border-bottom: 0px solid transparent;
-
-	span {
-		color: white;
-		margin: -26px 0 0;
-		display: block;
-		border-color: white;
-		border-width: 1px 0 1px 0;
-		border-style: dashed;
-		width: 200px;
-	}
-}
-

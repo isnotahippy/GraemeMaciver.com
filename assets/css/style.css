@@ -1,338 +1,46 @@
-body, html {
-  margin: 0;
-  background-image: url(../img/cardboard_flat.png);
-  background-color: #dadada; }
-
-.clearfix, .row, .left nav ul.navigation li.social, section.right section {
+.clearfix {
   zoom: 1; }
-  .clearfix:before, .row:before, .left nav ul.navigation li.social:before, section.right section:before, .clearfix:after, .row:after, .left nav ul.navigation li.social:after, section.right section:after {
+  .clearfix:before, .clearfix:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .left nav ul.navigation li.social:after, section.right section:after {
+  .clearfix:after {
     clear: both; }
 
-/**
- *	Notes: box-sizing breaks <IE8;
- *
- */
 html, body {
-  min-width: 970px;
-  max-width: 1240px;
-  position: relative; }
+  width: 100%;
+  height: 100%; }
 
-.left {
-  max-width: 285.2px;
-  min-width: 223.1px; }
-
-.row {
-  position: relative;
-  width: 100%; }
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.space {
-  height: 10px; }
-
-.grid {
-  width: 970px;
-  margin: 0 auto; }
-
-.col-1, .col-2, .col-3, .col-4,
-.col-5, .col-6, .col-7, .col-8,
-.col-9, .col-10, .col-11, .col-12, .menu-open .right,
-.col-13, .col-14, .col-15, .menu-closed .right, .col-16 {
-  margin-left: 1%;
-  margin-right: 1%;
-  float: left; }
-
-.col-no-left {
-  margin-left: 0;
-  margin-right: 2%; }
-
-.col-last {
-  margin-right: 0; }
-
-.col-1 {
-  width: 4.25%; }
-
-.col-2 {
-  width: 10.5%; }
-
-.col-3 {
-  width: 16.75%; }
-
-.col-4 {
-  width: 23%; }
-
-.col-5 {
-  width: 29.25%; }
-
-.col-6 {
-  width: 35.5%; }
-
-.col-7 {
-  width: 41.75%; }
-
-.col-8 {
-  width: 48%; }
-
-.col-9 {
-  width: 54.25%; }
-
-.col-10 {
-  width: 60.5%; }
-
-.col-11 {
-  width: 66.75%; }
-
-.col-12, .menu-open .right {
-  width: 73%; }
-
-.col-13 {
-  width: 79.25%; }
-
-.col-14 {
-  width: 85.5%; }
-
-.col-15, .menu-closed .right {
-  width: 91.75%; }
-
-.col-16 {
-  width: 98%; }
-
-.push-col-1, .menu-closed .right {
-  margin-left: 6.25%; }
-
-.push-col-2 {
-  margin-left: 12.5%; }
-
-.push-col-3 {
-  margin-left: 18.75%; }
-
-.push-col-4, .menu-open .right {
-  margin-left: 25%; }
-
-.push-col-5 {
-  margin-left: 31.25%; }
-
-.push-col-6 {
-  margin-left: 37.5%; }
-
-.push-col-7 {
-  margin-left: 43.75%; }
-
-.push-col-8 {
-  margin-left: 50%; }
-
-.push-col-9 {
-  margin-left: 56.25%; }
-
-.push-col-10 {
-  margin-left: 62.5%; }
-
-.push-col-11 {
-  margin-left: 68.75%; }
-
-.push-col-12 {
-  margin-left: 75%; }
-
-.push-col-13 {
-  margin-left: 81.25%; }
-
-.push-col-14 {
-  margin-left: 87.5%; }
-
-.push-col-15 {
-  margin-left: 93.75%; }
-
-.push-col-16 {
-  margin-left: 100%; }
-
-.clearfix, .row, .left nav ul.navigation li.social, section.right section {
-  zoom: 1; }
-  .clearfix:before, .row:before, .left nav ul.navigation li.social:before, section.right section:before, .clearfix:after, .row:after, .left nav ul.navigation li.social:after, section.right section:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-  .clearfix:after, .row:after, .left nav ul.navigation li.social:after, section.right section:after {
-    clear: both; }
-
-.transitions .left {
-  -webkit-transition: left 1s ease-out;
-  -moz-transition: left 1s ease-out;
-  -o-transition: left 1s ease-out;
-  -ms-transition: left 1s ease-out;
-  transition: left 1s ease-out; }
-.transitions .right {
-  -webkit-transition: margin 1s ease-out, width 1s ease-out;
-  -moz-transition: margin 1s ease-out, width 1s ease-out;
-  -o-transition: margin 1s ease-out, width 1s ease-out;
-  -ms-transition: margin 1s ease-out, width 1s ease-out;
-  transition: margin 1s ease-out, width 1s ease-out; }
-
-.menu-closed .left {
-  left: -300px; }
-.menu-closed .right .open {
-  left: 1.5%; }
-
-.menu-open .right .open {
-  left: -50px; }
-
-.open, .close {
-  cursor: pointer; }
-
-.left {
-  position: fixed;
-  height: 100%;
-  background: url(../img/tweed.png);
-  border-right: 1px solid rgba(0, 0, 0, 0.4);
-  z-index: 10; }
-  .left nav ul.contact {
-    margin: 0;
-    padding: 10px;
-    list-style: none;
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 12px 10px -11px rgba(0, 0, 0, 0.5), inset 0 -14px 10px -11px rgba(0, 0, 0, 0.3); }
-    .left nav ul.contact li {
-      padding: 5px 10px;
-      position: relative;
-      font-size: 0.8em;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      color: white;
-      overflow: hidden; }
-      .left nav ul.contact li i {
-        margin-right: 0.5em; }
-  .left nav ul.navigation {
-    margin: 0 10px;
-    padding: 0;
-    list-style: none; }
-    .left nav ul.navigation li {
-      padding: 15px 10px;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
-      border-top: 1px dashed rgba(255, 255, 255, 0.4);
-      position: relative; }
-      .left nav ul.navigation li.social a {
-        float: left;
-        margin: 0 20px 0 0; }
-      .left nav ul.navigation li a {
-        display: block;
-        -webkit-transition: padding 0.3s ease-out;
-        -moz-transition: padding 0.3s ease-out;
-        -o-transition: padding 0.3s ease-out;
-        -ms-transition: padding 0.3s ease-out;
-        transition: padding 0.3s ease-out; }
-      .left nav ul.navigation li.first {
-        border-top: 0; }
-      .left nav ul.navigation li.last {
-        border-bottom: 0; }
-    .left nav ul.navigation li.active a, .left nav ul.navigation li:hover a {
-      padding: 0 0 0 10px; }
-    .left nav ul.navigation li.active.social a, .left nav ul.navigation li.active.first a, .left nav ul.navigation li:hover.social a, .left nav ul.navigation li:hover.first a {
-      padding: 0; }
-  .left .close {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 20px;
-    padding: 5px;
-    color: white;
-    border: 3px solid white; }
-
-section.right {
-  float: left;
-  width: 100%; }
-  section.right section {
-    padding-bottom: 2em; }
-    section.right section h2 {
-      padding: 7px 0 6px;
-      margin: 0; }
-    section.right section.first {
-      border-top: 0; }
-    section.right section.last {
-      border-bottom: 0; }
-    section.right section img {
-      margin: 2em -220px 0 0;
-      float: right;
-      border: 0; }
-    section.right section header, section.right section article {
-      margin: 0 220px 0 0;
-      position: relative; }
-    section.right section header nav a, section.right section article nav a {
-      display: block;
-      margin: 0.5em 0; }
-  section.right .open {
-    -webkit-transition: left 1s ease-out;
-    -moz-transition: left 1s ease-out;
-    -o-transition: left 1s ease-out;
-    -ms-transition: left 1s ease-out;
-    transition: left 1s ease-out;
-    z-index: 1;
-    position: fixed;
-    left: 20px;
-    top: 13px;
-    border-radius: 20px;
-    padding: 5px;
-    color: black;
-    border: 3px solid black;
-    padding: 5px 6px; }
-
-.skills ul {
-  padding: 0;
-  list-style: none; }
-  .skills ul li {
+body {
+  margin: 0;
+  padding: 0; }
+  body .container {
     width: 100%;
-    position: relative;
-    padding: 0.4em;
-    margin: 0.2em 0;
-    background: url(../img/tweed.png); }
-    .skills ul li i {
+    height: 100%;
+    overflow: hidden;
+    position: relative; }
+    body .container:before {
       position: absolute;
       top: 0;
       left: 0;
-      width: 0%;
-      display: block;
+      content: " ";
+      width: 100%;
       height: 100%;
-      background: rgba(2, 119, 158, 0.3);
-      z-index: 0;
-      -webkit-transition: width 1s ease-out;
-      -moz-transition: width 1s ease-out;
-      -o-transition: width 1s ease-out;
-      -ms-transition: width 1s ease-out;
-      transition: width 1s ease-out; }
-    .skills ul li span {
-      z-index: 2;
-      position: relative; }
-
-.cv {
-  position: absolute;
-  right: -220px;
-  top: 192px;
-  display: block;
-  width: 200px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1em;
-  border-top: 30px solid rgba(2, 119, 158, 0.8);
-  border: 30px solid rgba(2, 119, 158, 0.8);
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 0px solid transparent; }
-  .cv span {
-    color: white;
-    margin: -26px 0 0;
-    display: block;
-    border-color: white;
-    border-width: 1px 0 1px 0;
-    border-style: dashed;
-    width: 200px; }
+      box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.8);
+      z-index: 500; }
+    body .container video {
+      position: absolute;
+      right: 0;
+      width: auto;
+      height: 100%; }
+    body .container .content {
+      position: relative;
+      z-index: 600; }
+      body .container .content #logo {
+        position: relative;
+        width: 300px;
+        fill: rgba(0, 0, 0, 0.9); }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -389,7 +97,7 @@ body {
 .skills ul {
   color: #FFFFFF; }
 
-/*
+/*!
  *  Font Awesome 3.0.2
  *  the iconic font designed for use with Twitter Bootstrap
  *  -------------------------------------------------------
@@ -417,7 +125,6 @@ body {
   src: url("../font/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
   font-weight: normal;
   font-style: normal; }
-
 /*  Font Awesome styles
     ------------------------------------------------------- */
 [class^="icon-"],
@@ -509,7 +216,7 @@ li [class*=" icon-"], .nav li [class^="icon-"],
 
 ul.icons {
   list-style-type: none;
-  text-indent: -0.75em; }
+  text-indent: -.75em; }
   ul.icons li [class^="icon-"],
   ul.icons li [class*=" icon-"] {
     width: .75em; }
@@ -601,35 +308,30 @@ ul.icons {
 
   100% {
     -moz-transform: rotate(359deg); } }
-
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); }
 
   100% {
     -webkit-transform: rotate(359deg); } }
-
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg); }
 
   100% {
     -o-transform: rotate(359deg); } }
-
 @-ms-keyframes spin {
   0% {
     -ms-transform: rotate(0deg); }
 
   100% {
     -ms-transform: rotate(359deg); } }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg); }
 
   100% {
     transform: rotate(359deg); } }
-
 @-moz-document url-prefix() {
   .icon-spin {
     height: .9em; }
@@ -642,7 +344,6 @@ ul.icons {
 
   .btn .icon-spin.icon-large {
     height: .75em; } }
-
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
 .icon-glass:before {
