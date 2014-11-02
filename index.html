@@ -7,205 +7,107 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<style>
 
-		@-webkit-keyframes gradient {
-			0% { top: -100%; left: 0%; }
-			25% {top: 0%; left: -100%; }
-			50% { top: -100%; left: 0%; }
-			75% {top: 0%; left: -100%; }
-		}
-
 		body {
+			background: url(assets/img/sky.jpg);
+			background-size: cover;
+			background-position: bottom left;
+			font-family: helvetica, arial, sans-serif;
+		}
+
+		@-webkit-keyframes colours {
+			0% { fill: #EFEFE7; }
+			25% { fill: #f17b1d; }
+			50% { fill: #24ac4d; }
+			75% { fill: #b3251b; }
+			100% { fill: #ffcd14; }
+		}
+
+		#GM {
+			width: 100%;
+		}
+
+		#G polygon,
+		#M polygon {
+			-webkit-animation: colours 60s linear infinite;
+		}
+
+		.container {
+			width: 350px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -235px 0 0 -175px;
+		}
+
+		.container ul {
+			list-style: none;
 			margin: 0;
-			font-family: 'Lato', sans-serif;
-			font-size: 16px;
+			padding: 0;
+
 		}
 
-		.background {
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			position: relative;
-			text-align: left;
+		.container ul li {
+			color: lightgrey;
+			text-align: center;
+			font-size: 100%;
+			margin: 0.4em 0;
 		}
 
-		.background:after {
-			content: " ";
-			position: absolute;
-			top: -100%;
-			left: 0%;
-			width: 200%;
-			height: 200%;
-			background: -moz-linear-gradient(45deg,  rgba(172,203,73,0.6) 0%, rgba(236,203,73,0.6) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(172,203,73,0.6)), color-stop(100%,rgba(236,203,73,0.6))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(45deg,  rgba(172,203,73,0.6) 0%,rgba(236,203,73,0.6) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(45deg,  rgba(172,203,73,0.6) 0%,rgba(236,203,73,0.6) 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(45deg,  rgba(172,203,73,0.6) 0%,rgba(236,203,73,0.6) 100%); /* IE10+ */
-			background: linear-gradient(45deg,  rgba(172,203,73,0.6) 0%,rgba(236,203,73,0.6) 100%); /* W3C */
-			
-			-webkit-animation: gradient 10s infinite;
-			animation: gradient 10s infinite;
-		}
-
-		.background .novideo {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-		.background .novideo img {
-			min-width: 100%;
-			min-height: 100%;
-			max-height: 100%;
-		}
-
-		video {
-			display: block;
-			min-width: 100%;
-			min-height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-
-
-		section {
-			top: 0;
-			left: 0;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-		}
-
-		section .constrain {
-			width: 750px;
-			margin: 10% auto 0;
-		}
-
-		section i {
-			color: white;
-			font-size: 200%;
-			position: absolute;
-			bottom: 5%;
-			left: 5%;
-		}
-
-		section nav {
-			position: relative;
-			margin: 5% 0 0 285px;
-			font-size: 140%;
-		}
-
-		h1 {
-			display: block;
-			width: 100%;
-			margin: 0 auto;
-			font-size: 500%;
+		.container ul li.title {
+			font-size: 160%;
 			color: white;
 			text-transform: uppercase;
-			letter-spacing: 0.2em;
-			line-height: 0.9em;
+			margin: 0 0 0.2em;
 		}
 
-		h1 span {
-			display: block;
-			margin: 0 0 0 3.49em;
+		.container ul li.location {
+			margin: 0 0 2em;
+			text-transform: uppercase;
 		}
 
-		nav ul {
-			margin: 5% 0 0;
-			padding: 0;
-			list-style: none;
-		}
-
-		nav ul li {
-			margin: 3% 0;
-		}
-
-		nav, nav a {
-			color: white;
-		}
-
-		nav a {
-			text-decoration: none;
+		a {
+			color: lightgrey;
 			display: inline-block;
-			padding: 0 0 2px;
-			border-bottom: 2px solid white;
+			text-decoration: none;
 		}
 
-		@media (max-width: 767px) {
-			video {
-				display: none;
-			}
-
-			.background .novideo {
-				display: block;
-			}
-
-			section .constrain {
-				width: 300px;
-			}
-
-			h1 {
-				font-size: 195%;
-
-			}
-
-			h1 span {
-				margin: 0 0 0 3.55em;
-			}
-
-			section nav {
-				margin: 5% 0 0 112px;
-				font-size: 100%;
-			}
+		a:hover {
+			color: white;
 		}
 	</style>
 </head>
 <body>
-	<div class="background">
-		<div id="video-poster" class="novideo"><img src="assets/video/poster.jpg" alt="seaside" /></div>
-		<video id="video" autoplay loop poster="assets/video/poster.jpg">
-		    <source src="assets/video/seaside.webm" type='video/webm;codecs="vp8, vorbis"' />
-			<source src="assets/video/seaside.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-		</video>
+	<div class="container">
+		<svg id="GM" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 viewBox="0 0 514 394.4" enable-background="new 0 0 614.4 614.4" xml:space="preserve">
+			<g id="G">
+				<polygon fill="#EFEFE7" points="57.2,0 0,57.2 0,286 57.2,343.2 171.6,343.2 228.8,286 228.8,171.6 171.6,171.6 114.4,228.8 
+					171.6,228.8 171.6,286 57.2,286 57.2,57.2 171.6,57.2 171.6,114.4 228.8,114.4 228.8,57.2 171.6,0 	"/>
+			</g>
+			<g id="M">
+				<polygon fill="#EFEFE7" points="287.1,343.2 344.3,343.2 344.3,114.4 372.9,171.6 430.1,171.6 458.7,114.4 458.7,343.2 
+					515.9,343.2 515.9,0 458.7,0 401.5,114.4 344.3,0 287.1,0 	"/>
+			</g>
+			<g id="shadows" opacity="5.000000e-02">
+				<polygon points="143,57.2 171.6,0 171.6,57.2 	"/>
+				<polygon points="57.2,57.2 0,57.2 57.2,85.8 	"/>
+				<polygon points="57.2,286 57.2,343.2 85.8,343.2 	"/>
+				<polygon points="171.6,271.7 171.6,286 228.8,286 	"/>
+				<polygon points="157.3,228.8 171.6,228.8 171.6,171.6 	"/>
+				<polygon points="344.3,0 344.3,114.4 358.6,28.6 	"/>
+				<polygon points="358.6,143 401.5,114.4 372.9,171.6 	"/>
+				<polygon points="458.7,0 444.4,28.6 458.7,114.4 	"/>
+			</g>
+		</svg>
+
+		<ul>
+			<li class="title">Graeme Maciver</li>
+			<li class="location">Glasgow / London </li>
+			<li><a href="mailto:hello@graememaciver.com">hello@graememaciver.com</a></li>
+			<li><a href="http://twitter.com/isnotahippy">Twitter</a></li>
+			<li><a href="https://www.linkedin.com/in/graememaciver">Linked In</a></li>
+			<li><a href="https://github.com/isnotahippy">Github</a></li>
+		</ul>
 	</div>
-	<section>
-		<div class="constrain">
-			<h1>Graeme <span>Maciver</span></h1>
-			<nav>
-				<ul>
-					<li class="locations">Glasgow / London</li>
-					<li>hello@graememaciver.com</li>
-					<li><a href="https://uk.linkedin.com/in/graememaciver/">Linked in</a></li>
-					<li><a href="https://twitter.com/isnotahippy">Twitter</a></li>
-					<li><a href="http://github.com/isnotahippy">Github</a></li>
-				</ul>
-			</nav>
-		</div>
-		<i id="video-toggle" class="icon-video-1"></i>
-	</section>
-
-	<script type="text/javascript">
-		var video = document.getElementById('video'),
-			videoPoster = document.getElementById('video-poster')
-			videoToggle = document.getElementById('video-toggle');
-
-		function toggleVideo() {
-			if (video.style.display=='none') {
-				video.style.display = 'block';
-				video.play();
-			} else {
-				video.style.display = 'none';
-				video.stop();
-			}
-		}
-
-		videoToggle.addEventListener('touchstart', toggleVideo);
-		videoToggle.addEventListener('click', toggleVideo);
-
-
-	</script>
 </body>
 </html>
