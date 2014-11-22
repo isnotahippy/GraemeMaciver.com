@@ -1,5 +1,5 @@
 #!/Users/graeme/Envs/gmcom/bin/python
-from street import app
+from gmcom import app
 from flask.ext.script import Manager, Server
 
 manager = Manager(app)

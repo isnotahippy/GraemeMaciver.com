@@ -11,6 +11,6 @@ def register_blueprints(app):
     # Prevents circular imports
     app.register_blueprint(blueprint)
 
-from street import views
+from gmcom import views
 
 register_blueprints(app)

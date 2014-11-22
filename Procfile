@@ -1,1 +1,1 @@
-Procfile
+web: gunicorn gmcom:app --log-file -
